@@ -5,11 +5,11 @@ public class Main {
         Vertex v3 = new Vertex("3");
         Vertex v4 = new Vertex("4");
 
-        v1.addNeighbour(v2);
-        v1.addNeighbour(v3);
-        v2.addNeighbour(v4);
-        v3.addNeighbour(v4);
-        v3.addNeighbour(v4);
+        v1.addAdjacency(v2);
+        v1.addAdjacency(v3);
+        v2.addAdjacency(v4);
+        v3.addAdjacency(v4);
+        v3.addAdjacency(v4);
 
         DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
         depthFirstSearch.search(v1);

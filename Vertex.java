@@ -5,16 +5,15 @@ public class Vertex {
 
     private String name;
     public boolean visited;
-    public List<Vertex> neighbourList;
-    public Vertex predeccessor;
+    public List<Vertex> adjacencyList;
 
     public Vertex(String name) {
         this.name = name;
-        neighbourList = new ArrayList<>();
+        adjacencyList = new ArrayList<>();
     }
 
-    public void addNeighbour(Vertex vertex) {
-        neighbourList.add(vertex);
+    public void addAdjacency(Vertex vertex) {
+        adjacencyList.add(vertex);
     }
 
     public void setName(String name) {
@@ -25,8 +24,8 @@ public class Vertex {
         this.visited = visited;
     }
 
-    public void setNeighbourList(List<Vertex> neighbourList) {
-        this.neighbourList = neighbourList;
+    public void setAdjacencyList(List<Vertex> adjacencyList) {
+        this.adjacencyList = adjacencyList;
     }
 
     public String getName() {
@@ -37,8 +36,8 @@ public class Vertex {
         return visited;
     }
 
-    public List<Vertex> getNeighbourList() {
-        return neighbourList;
+    public List<Vertex> getAdjacencyList() {
+        return adjacencyList;
     }
 
     @Override

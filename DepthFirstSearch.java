@@ -10,7 +10,7 @@ public class DepthFirstSearch {
         while (!stack.isEmpty()) {
             Vertex actualVertex = stack.pop();
             System.out.print(" " +actualVertex.getName());
-            for( Vertex v: actualVertex.getNeighbourList()) {
+            for( Vertex v: actualVertex.getAdjacencyList()) {
                 if (!v.isVisited()) {
                     v.setVisited(true);
                     stack.push(v);
@@ -22,7 +22,7 @@ public class DepthFirstSearch {
     public void recursiveSearch(Vertex vertices) {
         System.out.print(vertices.getName() + " ");
 
-        for (Vertex vertex : vertices.getNeighbourList()) {
+        for (Vertex vertex : vertices.getAdjacencyList()) {
             if (!vertex.isVisited()) {
                 vertex.setVisited(true);
                 recursiveSearch(vertex);
